@@ -1,0 +1,50 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col col-12 col-sm-4"></div>
+    <div class="col col-12 col-sm-4">
+      <form (ngSubmit)="AddProduct()">
+          <table class="table">
+            <tr>
+              <td>Product ID</td>
+              <td><input type="text" class="form-control" name="p_id" [(ngModel)]="productItem.productId" ></td>
+            </tr> 
+           
+            <tr>
+                <td>Product Name</td>
+                <td><input type="text" class="form-control" name="p_name" [(ngModel)]="productItem.productName"></td>
+              </tr>
+            <tr>
+                <td>Product CODE</td>
+                <td><input type="text" class="form-control" name="p_code" [(ngModel)]="productItem.productCode" ></td>
+            </tr>
+            <tr>
+                <td>Product Desc</td>
+                <td><input type="text" class="form-control" name="p_description" [(ngModel)]="productItem.description"></td>
+              </tr>
+            <tr>
+                <td>Product Availabe</td>
+                <td><input type="date" class="form-control" name="p_available" [(ngModel)]="productItem.releaseDate" ></td>
+            </tr>  
+            <tr>
+                <td>Product Price</td>
+                <td><input type="text" class="form-control" name="p_price" [(ngModel)]="productItem.price" ></td>
+            </tr>  
+            <tr>
+                <td>Product Rating</td>
+                <td><input type="text" class="form-control" name="p_rating" [(ngModel)]="productItem.starRating" ></td>
+            </tr>  
+            <tr>
+                <td>Product Image</td>
+                <td><input type="text" class="form-control" name="p_image" [(ngModel)]="productItem.imageUrl" ></td>
+            </tr>
+            <tr>
+                <td><button type="reset" class="btn btn-primary">RESET</button></td>
+                <td><button type="submit" class="btn btn-primary">SUBMIT</button></td>
+            </tr>          
+          </table>
+      </form>
+    </div>
+    <div class="col col-12 col-sm-4"></div>
+  </div>
+</div>

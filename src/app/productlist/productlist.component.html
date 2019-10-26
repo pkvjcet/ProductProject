@@ -1,0 +1,61 @@
+<div class="card">
+  <div class="card-header">
+   {{pageTitle}}
+  </div>
+  <div class="card-body">
+    <div class="table-resposive">
+      <div class="table">
+        <table class="table" *ngIf='products && products.length'>
+            <thead>
+                <tr>
+                  <th>
+                    <button type="submit" class="btn btn-primary" >Show Image</button>
+                  </th>
+                  <th>Product</th>
+                 <th>Code</th>
+                <th>Available</th>
+                <th>Price</th>
+                <th>5 start rating</th>      
+                </tr>
+              </thead>
+              <tr *ngFor ='let product of products'>
+                <td><img [src]='product.imageUrl' alt="" [style.width.px]='imageWidth' [style.margin.px]='imageMargin'></td>
+                <td>{{product.productName}}</td>
+                <td>{{product.productCode}}</td>
+                <td>{{product.releaseDate}}</td>
+                <td>{{product.price|currency:'INR':symbol:'1.2-2'}}</td>
+                <td>{{product.starRating}}</td>
+              </tr>
+        </table>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col col-12 col-sm-4"></div>
+    <div class="col col-12 col-sm-4">
+      <table class="table">
+        <tr>
+          <th><button type="submit" class="btn btn-primary">Show Image</button></th>
+          <th>Product</th>
+          <th>Code</th>
+          <th>Available</th>
+          <th>Price</th>
+          <th>5 start rating</th>
+        </tr>
+       </table>      
+
+    </div>
+    <div class="col col-12 col-sm-4"></div>
+  </div>
+</div> -->
